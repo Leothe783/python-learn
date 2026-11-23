@@ -1,9 +1,14 @@
-nub=(input('Enter a number'))
-reversed_num = 0
+ecimal = int(input("Enter a decimal number: "))
+binary = ""
 
-while num > 0:
-    digit = num % 10                      # Extract the last digit
-    reversed_num = reversed_num * 10 + digit  # Append digit to reversed number
-    num = num // 10                        # Remove the last digit
+# Outer loop runs once for the number, inner loop extracts binary digits
+for _ in range(1):
+    temp =
+    if temp == 0:
+        binary = "0"
+    while temp > 0:
+        remainder = temp % 2
+        binary = str(remainder) + binary
+        temp = temp // 2
 
-print("Reversed number:", reversed_num)
+print("Binary number:", binary)
