@@ -1,14 +1,15 @@
-ecimal = int(input("Enter a decimal number: "))
-binary = ""
+base = float(input("Enter the base number: "))
+exponent = int(input("Enter the power (n): "))
 
-# Outer loop runs once for the number, inner loop extracts binary digits
-for _ in range(1):
-    temp =
-    if temp == 0:
-        binary = "0"
-    while temp > 0:
-        remainder = temp % 2
-        binary = str(remainder) + binary
-        temp = temp // 2
+result = 1
 
-print("Binary number:", binary)
+if exponent >= 0:
+    for _ in range(exponent):
+        result *= base
+else:
+    # Handle negative exponents by multiplying base (-(exponent)) times and taking reciprocal
+    for _ in range(-exponent):
+        result *= base
+    result = 1 / result
+
+print(f"{base} raised to the power of {exponent} is {result}")
